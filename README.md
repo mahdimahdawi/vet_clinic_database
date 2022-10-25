@@ -15,23 +15,18 @@ This repository includes files with plain SQL that can be used to recreate a dat
 
 ## Authors
 
-👤 **Author1**
+👤 **Mahdi Mahdawi**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@mahdimahdawi](https://github.com/mahdimahdawi/react-capstone)
+- Twitter: [@Mahdimahdawo](https://mobile.twitter.com/mahdimahdawi16)
+- LinkedIn: [Mahdi Mahdawi](https://www.linkedin.com/in/mahdi-mahdawi-434296189)
+nkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page]([../../issues/](https://github.com/mahdimahdawi/vet_clinic_database/issues)).
 
 ## Show your support
 
