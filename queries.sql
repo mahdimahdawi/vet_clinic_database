@@ -33,3 +33,12 @@ ROLLBACK TO SP1;
 UPDATE animals SET wieght_kg = wieght_kg * -1 WHERE wieght_kg < 0;
 COMMIT;
 SELECT * FROM animals;
+
+/* AGGREGATE FUNCTIONS */
+SELECT COUNT(*) FROM animals;
+SELECT COUNT (*) FROM animals WHERE neutered = false;
+SELECT AVG(wieght_kg) FROM animals;
+SELECT MAX(escape_attempts) FROM animals;
+SELECT species, MAX(wieght_kg) FROM animals GROUP BY species;
+
+
