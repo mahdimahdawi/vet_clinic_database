@@ -42,3 +42,42 @@ CREATE TABLE species(
  ADD CONSTRAINT owner_fk
  FOREIGN KEY(owner_id)
  REFERENCES owners(id);
+ 
+ /* Day 4 */
+CREATE TABLE  vets(
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name VARCHAR(64),
+    age INT,
+    date_of_graduation DATE
+    );
+    
+    
+CREATE TABLE specialization(
+    vet_id INT,
+    species_id INT
+    );
+    
+ALTER TABLE specialization
+ADD CONSTRAINT vets_fk
+FOREIGN KEY(vet_id)
+REFERENCES vets(id);
+
+ALTER TABLE specialization
+ADD CONSTRAINT species_fk
+FOREIGN KEY(species_id)
+REFERENCES species(id);
+
+CREATE TABLE visits(
+    animal_id INT,
+    vet_id INT
+    );
+    
+ALTER TABLE visits
+ADD CONSTRAINT animals_fk
+FOREIGN KEY(animal_id)
+REFERENCES animals(id);
+
+ALTER TABLE visits
+ADD CONSTRAINT vets_fk
+FOREIGN KEY(vet_id)
+REFERENCES vets(id);
