@@ -69,8 +69,9 @@ REFERENCES species(id);
 
 CREATE TABLE visits(
     animal_id INT,
-    vet_id INT
+    vet_id INT,
     );
+ALTER TABLE visits ADD COLUMN date_of_visit DATE;
     
 ALTER TABLE visits
 ADD CONSTRAINT animals_fk
