@@ -62,3 +62,34 @@ JOIN owners ON owners.id = animals.owner_id AND escape_attempts = 0 AND owners.f
 
 SELECT owners.full_name,  COUNT(owner_id) FROM animals
 RIGHT JOIN owners ON owners.id = animals.owner_id GROUP BY owners.full_name;
+
+/* Day 4 */
+SELECT A.name, MAX(V.date_of_visit) FROM animals A
+JOIN visits V ON V.animal_id = A.id AND V.vet_id = 1 GROUP BY A.name;
+
+SELECT Count(A.name) FROM animals A
+JOIN visits V ON A.id = V.animal_id JOIN vets T ON T.id = V.vet_id AND T.name = 'Stephaine mendez' GROUP BY V.vet_id;
+
+SELECT V.name, S.name FROM vets V
+FULL JOIN specialization SP ON V.id = SP.vet_id FULL JOIN species S ON S.id = SP.species_id;
+
+SELECT A.name FROM animals A
+JOIN visits V ON A.id = V.animal_id JOIN vets T ON T.id = V.vet_id AND T.name = 'Stephaine mendez';
+
+SELECT A.name FROM animals A
+JOIN visits V ON A.id = V.animal_id JOIN vets T ON T.id = V.vet_id WHERE T.name = 'Stephaine mendez' AND V.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+
+SELECT A.name, COUNT(V.vet_id) FROM animals A
+JOIN visits V ON A.id = V.animal_id JOIN vets T ON T.id = V.vet_id GROUP BY A.name order by COUNT(V.vet_id) DESC;
+
+SELECT A.name, MIN(V.date_of_visit) FROM animals A
+JOIN visits V ON A.id = V.animal_id JOIN vets T ON T.id = V.vet_id WHERE T.name = 'Maisy Smith' GROUP BY A.name;
+
+SELECT * FROM animals A JOIN visits V ON A.id = V.animal_id JOIN vets T ON T.id = V.vet_id;
+
+SELECT COUNT(*) FROM vets T
+LEFT JOIN specialization SP ON SP.species_id = T.id LEFT JOIN species S ON S.id = SP.species_id LEFT JOIN visits ON T.id = visits.animal_id WHERE species_id IS NULL;
+
+SELECT COUNT(A.id), A.* FROM animals A
+JOIN vets T ON V.vet_id = T.id JOIN visits V ON A.id = V.animal_id WHERE T.name = 'Maisy Smith' GROup BY A.id ORDER BY COUNT(A.id) DESC LIMIT 1;
+
