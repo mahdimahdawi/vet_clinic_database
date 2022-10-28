@@ -91,5 +91,5 @@ SELECT COUNT(*) FROM vets T
 LEFT JOIN specialization SP ON SP.species_id = T.id LEFT JOIN species S ON S.id = SP.species_id LEFT JOIN visits ON T.id = visits.animal_id WHERE species_id IS NULL;
 
 SELECT COUNT(A.id), A.* FROM animals A
-JOIN vets T ON V.vet_id = T.id JOIN visits V ON A.id = V.animal_id WHERE T.name = 'Maisy Smith' GROup BY A.id ORDER BY COUNT(A.id) DESC;
+JOIN vets T ON V.vet_id = T.id JOIN visits V ON A.id = V.animal_id WHERE T.name = 'Maisy Smith' GROup BY A.id ORDER BY COUNT(A.id) DESC LIMIT 1;
 
