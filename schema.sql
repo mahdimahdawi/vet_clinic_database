@@ -82,3 +82,8 @@ ALTER TABLE visits
 ADD CONSTRAINT vets_fk
 FOREIGN KEY(vet_id)
 REFERENCES vets(id);
+
+/* Week 2 Database Normalization pair programing */
+
+ALTER TABLE owners ADD COLUMN email VARCHAR(120);
+
