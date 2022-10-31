@@ -87,3 +87,9 @@ REFERENCES vets(id);
 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
+CREATE INDEX visit_index ON visits(vet_id ASC);
+
+CREATE INDEX visit_index2 ON visits(vet_id ASC);
+
+CREATE INDEX owners_idex ON owners(email ASC);
+
